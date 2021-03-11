@@ -1,0 +1,28 @@
+
+name: concept-learner-0-CLEVR-Hans3
+mode: train
+resume: None
+seed: 0
+epochs: 50
+lr: 0.0001
+l2_grads: 1
+batch_size: 128
+num_workers: 4
+dataset: clevr-hans-state
+no_cuda: True
+train_only: False
+eval_only: False
+multi_gpu: False
+data_dir: /Users/ml-wstammer/Documents/PhD/datasets/CLEVR-Hans/CLEVR-Hans3/
+fp_ckpt: None
+n_slots: 10
+n_iters_slot_att: 3
+n_attr: 18
+n_heads: 4
+set_transf_hidden: 128
+conf_version: CLEVR-Hans3
+device: cpu
+n_imgclasses: 3
+class_weights: tensor([0.3333, 0.3333, 0.3333])
+classes: [0 1 2]
+category_ids: [ 3  6  8 10 18]
