@@ -12,6 +12,9 @@ Concept Learner on the [CLEVR-Hans3](https://github.com/ml-research/CLEVR-Hans) 
 use the model. As in the original paper the concept embedding module (Set Prediction Network with Slot Attention) was 
 pretrained on the original CLEVR data. Files for this can be found in ```src/pretrain-slot-attention/```.
 
+Please visit the [NeSy XIL](https://github.com/ml-research/NeSyXIL) repository for the Neuro-Symbolic Explanatory 
+Interactive Learning approach based on this Concept Learner.
+
 ## How to Run with docker on GPU:
 
 ### Dataset
@@ -33,7 +36,6 @@ To run the eaxmple train script with the CLEVR-Hans3 data follow:
 
 5. ```./scripts/clevr-hans-concept-learner_CLEVR_Hans3.sh 0 0 /workspace/datasets/CLEVR-Hans3/``` for running on gpu 0 
 with run number 0 (for saving)
-
 
 ### Citation
 If you find this code useful in your research, please consider citing:
