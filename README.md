@@ -27,7 +27,7 @@ To run the eaxmple train script with the CLEVR-Hans3 data follow:
 
 2. ```docker build -t nesy-concept-learner -f Dockerfile .```
 
-3. ```docker run -it -v /home/ml-stammer/Documents/repositories/NeSyConceptLearner:/workspace/repositories/NeSyConceptLearner -v /home/ml-stammer/Documents/datasets/CLEVR-Hans3:/workspace/datasets/CLEVR-Hans3 --name nesy-concept-learner --entrypoint='/bin/bash' --user $(id -u):$(id -g) --runtime nvidia nesy-concept-learner```
+3. ```docker run -it -v /pathto/NeSyConceptLearner:/workspace/repositories/NeSyConceptLearner -v /pathto/CLEVR-Hans3:/workspace/datasets/CLEVR-Hans3 --name nesy-concept-learner --entrypoint='/bin/bash' --user $(id -u):$(id -g) --runtime nvidia nesy-concept-learner```
 
 4. ```cd repositories/NeSyConceptLearner/src/```
 
