@@ -139,7 +139,7 @@ class CLEVR_HANS_EXPL(torch.utils.data.Dataset):
         class_id = scene['class_id']
 
         mask = 0
-        if self.conf_vers == 'conf_3':
+        if self.conf_vers == 'CLEVR-Hans3':
             for obj in scene['objects']:
                 if class_id == 0:
                     if (obj['shape'] == 'cube' and obj['size'] == 'large') or \
@@ -156,7 +156,7 @@ class CLEVR_HANS_EXPL(torch.utils.data.Dataset):
                             (obj['shape'] == 'sphere' and obj['size'] == 'small' and obj['color'] == 'yellow'):
                         rle = obj['mask']
                         mask += coco_mask.decode(rle)
-        elif self.conf_vers == 'conf_7':
+        elif self.conf_vers == 'CLEVR-Hans7':
             for obj in scene['objects']:
                 if class_id == 0:
                     if (obj['shape'] == 'cube' and obj['size'] == 'large') or \
@@ -206,7 +206,7 @@ class CLEVR_HANS_EXPL(torch.utils.data.Dataset):
 
         mask = torch.zeros(objects.shape)
 
-        if self.conf_vers == 'conf_3':
+        if self.conf_vers == 'CLEVR-Hans3':
             for i, obj in enumerate(objects):
                 if class_id == 0:
                     # if cube and large
@@ -233,7 +233,7 @@ class CLEVR_HANS_EXPL(torch.utils.data.Dataset):
                           and (obj[10:] == torch.tensor([0, 0, 1, 0, 0, 0, 0, 0])).all()).all():
                         mask[i, 3:8] = torch.tensor([1, 0, 0, 0, 1])
                         mask[i, 10:] = torch.tensor([0, 0, 1, 0, 0, 0, 0, 0])
-        elif self.conf_vers == 'conf_7':
+        elif self.conf_vers == 'CLEVR-Hans7':
             for i, obj in enumerate(objects):
                 if class_id == 0:
                     # if cube and large
