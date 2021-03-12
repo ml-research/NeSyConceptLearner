@@ -13,7 +13,7 @@ use the model. As in the original paper the concept embedding module (Set Predic
 pretrained on the original CLEVR data. 
 
 Files for pre-training yourself can be found in ```src/pretrain-slot-attention/``` 
-(follow the instrucitons in the corresponding README).
+(follow the instructions in the corresponding README).
 
 Please visit the [NeSy XIL](https://github.com/ml-research/NeSyXIL) repository for the Neuro-Symbolic Explanatory 
 Interactive Learning approach based on this Concept Learner to see further examples from the original paper.

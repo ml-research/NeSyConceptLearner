@@ -372,7 +372,7 @@ def plot(args):
         pass
 
     # change plotting function in utils in order to visualize explanations
-    assert args.conf_version == 'conf_3'
+    assert args.conf_version == 'CLEVR-Hans3'
     utils.save_expls(net, test_loader, "test", save_path=save_dir)
 
 
