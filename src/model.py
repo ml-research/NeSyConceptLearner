@@ -16,7 +16,8 @@ class SlotAttention(nn.Module):
         self.scale = dim ** -0.5
 
         self.slots_mu = nn.Parameter(torch.randn(1, 1, dim))
-        self.slots_log_sigma = nn.Parameter(torch.randn(1, 1, dim))
+        % self.slots_log_sigma = nn.Parameter(torch.randn(1, 1, dim))
+        self.slots_log_sigma = nn.Parameter(torch.randn(1, 1, dim)).abs().to(device='cuda')
 
         self.project_q = nn.Linear(dim, dim)
         self.project_k = nn.Linear(dim, dim)
