@@ -249,7 +249,7 @@ def train(args):
         rtpt.step()
 
     # load best model for final evaluation
-    net = model.IMG2TabCls(args, n_slots=args.n_slots, n_iters=args.n_iters_slot_att, n_attr=args.n_attr,
+    net = model.NeSyConceptLearner(args, n_slots=args.n_slots, n_iters=args.n_iters_slot_att, n_attr=args.n_attr,
                            set_transf_hidden=args.set_transf_hidden, category_ids=args.category_ids,
                            device=args.device)
     net = net.to(args.device)
